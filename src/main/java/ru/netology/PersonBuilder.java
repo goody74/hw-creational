@@ -11,7 +11,6 @@ public class PersonBuilder {
     public PersonBuilder() {
     }
 
-    ;
 
     public PersonBuilder setName(String name) {
         this.name = name;
@@ -39,7 +38,7 @@ public class PersonBuilder {
 
     public Person build() {
         if (name == null || surname == null) {
-            throw new IllegalArgumentException("Name and Surname needed!");
+            throw new IllegalStateException("Name and Surname needed!");
         }
         Person person = new Person(name, surname, age);
         person.setAddress(address);

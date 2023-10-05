@@ -16,7 +16,7 @@ public class Main {
         try {
             // Не хватает обяхательных полей
             new PersonBuilder().build();
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalStateException e) {
             e.printStackTrace();
 
         }

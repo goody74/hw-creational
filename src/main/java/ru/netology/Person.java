@@ -37,7 +37,7 @@ public class Person {
     }
 
     public OptionalInt getAge() {
-        return age;
+        return hasAge() ? age : OptionalInt.empty();
     }
 
     public String getAddress() {
